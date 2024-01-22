@@ -39,17 +39,17 @@ Follow these steps to run the project on your local machine:
 1. **Clone the project:**
    ```bash
    git clone https://github.com/vivekyadav20364/Blog_App_Next.git
-
+```
 2. **Install dependencies:**
 ```bash
    npm install
-
+```
 3. **Set up the .env file:**
 ```bash
 MONGODB_URI = mongodb+srv://vivekmgs0321:Vivek%400321@cluster0.nfh5bta.mongodb.net/?retryWrites=true&w=majority
 NEXT_PUBLIC_baseUrl = http://localhost:3000
-
-2. **Run the development server:**
+```
+4. **Run the development server:**
 ```bash
   npm run dev
-
+```
