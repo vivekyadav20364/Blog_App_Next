@@ -7,7 +7,6 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 
 
-
 const createblog = () => {
   const [formData,setFormData] = useState({});
   const [loading,setLoading] = useState(false);
@@ -41,7 +40,7 @@ const createblog = () => {
           return;
         }        
         try {
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_baseUrl}/api/blog`,
+        const response = await axios.post(`http://localhost:3000/api/blog`,
             formData,{headers:{'Content-Type':'application/json'}}
         );
         if(response.status==200){

@@ -19,7 +19,7 @@ const BlogContext = ({ children }) => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_baseUrl}/api/blog`
+        `http://localhost:3000/api/blog`
       );
       if (response.status === 200) {
         setAllData(response.data.allBlogData);
