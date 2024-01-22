@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 
 
-const createblog = () => {
+const Createblog = () => {
   const [formData,setFormData] = useState({});
   const [loading,setLoading] = useState(false);
   const {trigger,setTrigger} = ContextState();
@@ -104,4 +104,4 @@ const createblog = () => {
   )
 }
 
-export default createblog;
+export default Createblog;
