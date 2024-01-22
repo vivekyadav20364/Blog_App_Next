@@ -37,8 +37,8 @@ Explore the live application at [Blog App](https://blog-app-next-three.vercel.ap
 Follow these steps to run the project on your local machine:
 
 1. **Clone the project:**
-   ```bash
-   git clone https://github.com/vivekyadav20364/Blog_App_Next.git
+```bash
+git clone https://github.com/vivekyadav20364/Blog_App_Next.git
 ```
 2. **Install dependencies:**
 ```bash
