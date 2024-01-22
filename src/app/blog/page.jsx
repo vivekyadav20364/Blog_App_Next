@@ -40,7 +40,7 @@ const Createblog = () => {
           return;
         }        
         try {
-        const response = await axios.post(`http://localhost:3000/api/blog`,
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_baseUrl}/api/blog`,
             formData,{headers:{'Content-Type':'application/json'}}
         );
         if(response.status==200){
