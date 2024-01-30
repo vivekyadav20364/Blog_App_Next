@@ -7,6 +7,7 @@ import { ContextState } from '@/context/BlogContext';
 const ShowAllBlogs = () => {
 
 const {allData,setAllData,loading} = ContextState();
+console.log("All data",allData);
 
 if(loading){
   return(
@@ -24,11 +25,11 @@ if(loading){
     {allData && allData.map((items,ind)=>(
       <div key={ind} className="mx-3.5  my-5  shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]   flex-col justify-start items-center">
       <Link href={`${process.env.NEXT_PUBLIC_baseUrl}/blog/${ind}`} >
-        <Image className='w-full' width={250} height={250} src={'/blog.jpg'} alt='blogImg' />
+        <Image className='w-full' width={250} height={250} src={items.pic} alt='blogImg' />
         </Link>
          <div className='m-3'>
          <h2 className=' text-base text-center font-sans text-xl text-orange-500'>{items?.title}</h2>
-         <p className='pt-1 font-serif'>{(items?.description).substring(0,80)}<span>...</span></p>
+         <p className='pt-1 font-serif text-center'>{items?.introductions}<span>...</span></p>
          </div>
       </div>
       

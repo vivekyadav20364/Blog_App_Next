@@ -12,7 +12,15 @@ const blogSchema = new Schema({
     author:{
         type:String,
         required:true
-    }
+    },
+    introductions:{
+        type:String,
+        required:true
+    },
+    pic:{
+        type:String,
+        required:true,
+    },
 }
 ,{
     timestamps:true

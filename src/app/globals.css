@@ -2,3 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+.changeHtml img{
+   text-align: center !important;
+   width: 450px !important;
+   
+   overflow: hidden;
+   z-index: -1;
+}
+.changeHtml iframe{
+   text-align: center !important;
+   width: 580px !important;
+   
+   overflow: hidden;
+   z-index: -1;
+}
+@media (max-width:600px){
+    .changeHtml img{
+        width: 350px !important;
+    }   
+    .changeHtml iframe{
+        width: 350px !important;
+    }   
+}
+@media (max-width:500px){
+    .changeHtml{
+        width: 400px !important;
+    }   
+ 
+}
+@media (max-width:400px){
+    .changeHtml{
+        width: 330px !important;
+    }   
+ 
+}
+@media (max-width:350px){
+    .changeHtml{
+        width: 290px !important;
+    }   
+ 
+}
+
+.singleImg{
+width:400px;
+height:300px;
+}
+@media (max-width:440px){
+    .singleImg{
+        width:300px !important;
+        height:270px !important;
+    }  
+ 
+}

@@ -34,7 +34,6 @@ const BlogContext = ({ children }) => {
 
   return (
      <AppContext.Provider value={{allData,setAllData,trigger,setTrigger,loading}}>{ children }</AppContext.Provider>
-
   );
 };
 

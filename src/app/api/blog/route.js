@@ -6,13 +6,14 @@ export async function POST(req){
     dbConnect();
   try {
     const reqBody = await req.json();
-    const {title,description,author} = reqBody;
-    if(!title || !description || !author){
+    const {title,description,author,introductions,pic} = reqBody;
+    console.log("DATA", reqBody)
+    if(!title || !description || !author || !introductions || !pic){
       return NextResponse.json({message:"All fields are required"},{status:400});
     }
 
     const addBlog = new Blogs({
-        title,description,author
+        title,description,author,introductions,pic
     });
 
     await addBlog.save();
