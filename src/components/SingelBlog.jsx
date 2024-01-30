@@ -45,7 +45,8 @@ const DisplayBlogContent = ({ content }) => (
           </div>
           <p><span className='font-medium text-xl'>Auther: </span><b>{blogData.author?blogData.author:"Jhon Due"}</b></p>
           </div>
-          <p className='text-2xl font-bold px-2 font-sans'>{blogData.title}</p>
+          <p className='text-2xl font-bold px-2 font-sans'>{blogData.title.replace(/'/g, '&apos;')}</p>
+
           <p className='text-center px-3 font-serif'><DisplayBlogContent content={blogData.description} /></p>
           </div>
         :
