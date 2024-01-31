@@ -19,7 +19,9 @@ const DisplayBlogContent = ({ content }) => (
 
 
  useEffect(()=>{
-  setTrigger(!trigger);
+  const jsondata=JSON.stringify(allData[params?.id])
+  localStorage.setItem("Current data",jsondata);
+
   async function getAllProjectsData() {
     try {
       setBlogData(allData[params?.id]);
@@ -30,7 +32,9 @@ const DisplayBlogContent = ({ content }) => (
     }
   }
   getAllProjectsData();
-},[])
+},[params,allData])
+
+
 
   return (
     <div className='max-w-7xl w-full m-auto flex-col flex justify-center items-center mt-2 mb-6'>
