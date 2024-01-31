@@ -8,7 +8,7 @@ Welcome to the Blog Application! This project is a Next.js-based web application
    - Navigate through the initial landing page showcasing the available blog posts.
    
 2. **Post Creation Page:**
-   - Create new blog posts that will be securely saved in the MongoDB database.
+   - Create new blog posts with Images,videos,links,etc that will be securely saved in the MongoDB database.
 
 3. **Post Detail Page:**
    - View detailed information about each blog post on a dedicated page.
