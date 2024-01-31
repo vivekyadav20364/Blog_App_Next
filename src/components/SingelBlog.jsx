@@ -11,7 +11,7 @@ import { ContextState } from '@/context/BlogContext';
 const SingleBlog = () => {
  const [blogData,setBlogData]  =useState("");
 const params = useParams()
-const {allData,setAllData} = ContextState();
+const {allData,trigger,setTrigger} = ContextState();
 
 const DisplayBlogContent = ({ content }) => (
   <div className='text-center mx-1 px-2 sm:w-[450px] md:w-[600px] lg:w-[750px] changeHtml' dangerouslySetInnerHTML={{ __html: content }} />
@@ -19,6 +19,7 @@ const DisplayBlogContent = ({ content }) => (
 
 
  useEffect(()=>{
+  setTrigger(!trigger);
   async function getAllProjectsData() {
     try {
       setBlogData(allData[params?.id]);
@@ -45,8 +46,7 @@ const DisplayBlogContent = ({ content }) => (
           </div>
           <p><span className='font-medium text-xl'>Auther: </span><b>{blogData.author?blogData.author:"Jhon Due"}</b></p>
           </div>
-          <p className='text-2xl font-bold px-2 font-sans'>{blogData.title.replace(/'/g, '&apos;')}</p>
-
+          <p className='text-2xl font-bold px-2 font-sans'>{blogData.title}</p>
           <p className='text-center px-3 font-serif'><DisplayBlogContent content={blogData.description} /></p>
           </div>
         :
